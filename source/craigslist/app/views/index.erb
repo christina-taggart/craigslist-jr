@@ -1,5 +1,8 @@
 <div class="container">
+  <h1>John & Aditya's Internet Bazaar</h1>
   <%@categories.each do |category| %>
     <p><a href="/categories/<%=category.id%>"><%= category.name %></a></p>
   <%end%>
+  <br>
+  <p><a href="/add">Post a listing</a></p>
 </div>

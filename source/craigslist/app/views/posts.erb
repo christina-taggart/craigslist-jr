@@ -1,0 +1,5 @@
+<div class="container">
+  <h3><%= @post.title %> ($<%= @post.price %>)</h3>
+  <p><%= @post.description %></p>
+  <p><a href="mailtto:<%=@post.email%>"><%= @post.email %></a></p>
+</div>
