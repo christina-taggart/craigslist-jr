@@ -3,6 +3,11 @@ get '/' do
   erb :index
 end
 
+get '/categories' do
+  @category_names = Category.all.map {|category| category[:title]}
+  erb :category
+end
+
 # get all_categories
 # shows all categories
 

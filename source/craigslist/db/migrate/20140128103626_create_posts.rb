@@ -1,12 +1,12 @@
 class CreatePosts < ActiveRecord::Migration
   def change
   	create_table :posts do |column|
-  	  belongs_to :category
-      t.string :title
-      t.string :post_content
-      t.string :price
-      t.string :location
-      t.timestamps
+  	  column.belongs_to :category
+      column.string :title
+      column.string :post_content
+      column.string :price
+      column.string :location
+      column.timestamps
   	end
   end
 end
