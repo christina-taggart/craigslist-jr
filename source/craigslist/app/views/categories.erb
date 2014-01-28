@@ -1,5 +1,6 @@
 <div class="container">
+  <h2 class="list"><%=@category_name%></h2><br>
   <%@posts.each do |post| %>
-    <p><a href="/posts/<%=post.id%>"><%= post.title %></a> ($<%=post.price%>)</p>
+    <p class="list"><a href="/posts/<%=post.id%>"><%= post.title %></a> ($<%=post.price%>)</p>
   <%end%>
 </div>

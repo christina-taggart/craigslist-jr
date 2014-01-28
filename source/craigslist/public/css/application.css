@@ -1,10 +1,19 @@
 .container {
   margin: 20px auto;
-  width: 700px;
+  width: 40%;
   padding: 0px 20px 20px 20px;
 
 }
 
+.list {
+  text-align: center;
+}
+
 th {
   text-align: left;
+}
+
+#center-pic {
+  position: relative;
+  width: 100%
 }

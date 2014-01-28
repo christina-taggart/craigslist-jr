@@ -4,6 +4,7 @@ get '/' do
 end
 
 get '/categories/:id' do
+  @category_name = Category.find(params[:id]).name
   @posts = Post.joins(:category).where(categories: {id: params[:id]})
   erb :categories
 end
@@ -24,6 +25,10 @@ post '/add' do
            email: params[:email],
            price: params[:price]
           )
-  new_post.save
-  redirect "/posts/#{new_post.id}"
+  if new_post.valid?
+    new_post.save
+    redirect "/posts/#{new_post.id}"
+  else
+    redirect "/invalid_post"
+  end
 end
