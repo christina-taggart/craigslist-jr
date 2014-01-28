@@ -8,8 +8,10 @@ get '/categories' do
   erb :category
 end
 
-# get all_categories
-# shows all categories
+get '/post' do
+  @category_names = Category.all.map {|category| category[:title]}
+  erb :post
+end
 
 # get category
 # shows all posts for that category

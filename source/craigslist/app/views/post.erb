@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Add a listing!</h1>
+  <form>
+    Category:<br/>
+    <% @category_names.each do |category| %>
+    <input type="radio" name="category" value="<%= category %>"><%= category %><br/>
+    <% end %><br/>
+    Title: <input type="text" name="title"><br/>
+    Location: <input type="text" name="location"><br/>
+    Price: <input type="text" name="price"><br/>
+    Listing: <input type="text" name="listing"><br/>
+  </form>
+
+<a href="/">Go home!</a>
+</div>
+
+<!-- # title
+# post_content
+# price
+# location
+# a specified category -->
