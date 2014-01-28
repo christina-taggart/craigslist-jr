@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @category.name %></h1>
+  <ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to_post post %></li>
+  <% end %>
+  </ul>
+  <p> <%= link_to_new_post_form @category %> </p>
+</div>
