@@ -2,7 +2,7 @@ source :rubygems
 
 # PostgreSQL driver
 gem 'pg'
-
+gem 'activerecord-postgresql-adapter'
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'

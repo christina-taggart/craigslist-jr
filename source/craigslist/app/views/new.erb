@@ -1,0 +1,13 @@
+<form action='/posted' method='post' id='user_post'>
+  Post Category<br>
+
+<select name="category">
+  <% @categories.each do |cat| %>
+    <option value="<%= cat %>"><%= cat %></option>
+  <% end %>
+</select><br>
+  Post Title:<br> <input type='text' name='title'><br>
+  Post Content:<br> <textarea form='user_post' name='content' rows='20' cols='30'></textarea><br>
+  Your Email:<br> <input type='text' name='email'><br>
+  <input type='submit' value='Submit Post!'>
+</form>

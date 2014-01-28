@@ -6,7 +6,7 @@ general
 groups
 pets
 events
-lost+found
+lost found
 musicians
 local news
 politics
@@ -94,18 +94,18 @@ words
 writing
 yoga
 housing
-apts / housing
-rooms / shared
-sublets / temporary
+apts housing
+rooms shared
+sublets temporary
 housing wanted
 housing swap
 vacation rentals
-parking / storage
-office / commercial
+parking storage
+office commercial
 real estate for sale
 for sale
 antiques
-baby+kid
+baby kid
 barter
 bikes
 boats
@@ -118,29 +118,29 @@ general
 household
 jewelry
 materials
-rvs+camp
+rvs camp
 sporting
 tickets
 tools
 wanted
 appliances
-arts+crafts
-atv/utv/sno
+arts crafts
+atutsno
 auto parts
-beauty+hlth
-cars+trucks
-cds/dvd/vhs
+beauty hlth
+cars trucks
+cddvvhs
 cell phones
-clothes+acc
+clothes acc
 collectibles
 electronics
-farm+garden
+farm garden
 garage sale
 heavy equip
 motorcycles
 music instr
-photo+video
-toys+games
+photo video
+toys games
 video gaming
 services
 beauty
@@ -154,47 +154,47 @@ lessons
 marine
 pet
 automotive
-farm+garden
+farm garden
 household
-labor/move
+labomove
 skill'd trade
 real estate
 sm biz ads
 therapeutic
-travel/vac
-write/ed/tr8
+travevac
+writetr8
 jobs
-accounting+finance
-admin / office
-arch / engineering
-art / media / design
-biotech / science
-business / mgmt
+accounting finance
+admin office
+arch engineering
+art media design
+biotech science
+business mgmt
 customer service
 education
-food / bev / hosp
+food bev hosp
 general labor
 government
 human resources
 internet engineers
-legal / paralegal
+legal paralegal
 manufacturing
-marketing / pr / ad
-medical / health
+marketing pr ad
+medical health
 nonprofit sector
 real estate
-retail / wholesale
-sales / biz dev
-salon / spa / fitness
+retail wholesale
+sales biz dev
+salon spa fitness
 security
-skilled trade / craft
-software / qa / dba
-systems / network
+skilled trade craft
+software qa dba
+systems network
 technical support
 transport
-tv / film / video
-web / info design
-writing / editing
+tv film video
+web info design
+writing editing
 [ETC]
 [ part-time ]
 gigs

@@ -4,6 +4,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :content
       t.integer :category_id
+      t.integer :secret
+      t.string :email
       t.timestamps
     end
   end
