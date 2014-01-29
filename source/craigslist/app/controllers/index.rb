@@ -1,3 +1,6 @@
+require 'digest'
+
+
 get '/' do
 	@categories = Category.pluck(:name)
   erb :index
@@ -5,71 +8,52 @@ end
 
 
 get '/categories/:category_name' do
-	@category = Category.where(name: params[:category_name]).pop
+	@category = Category.find_by_name(params[:category_name])
 	@posts = @category.posts
 	erb :category
 end
 
 get '/posts/new' do   # Needs to be cleaned up a lot
-	category_name = params[:category]
-	@categories = Category.all
-	category_index = @categories.index{ |cat| cat.name == category_name }
-	@categories.insert(0, @categories.delete_at(category_index))
+	@categories = get_ordered_category_list(Category.find(params[:id]))
 	erb :new_post
 end
 
 get '/posts/:post_id' do
-	@post = Post.where(id: params[:post_id]).pop
+	@post = Post.find(params[:post_id])
 	erb :post
 end
 
 post '/posts' do # Really ugly code. Needs to be cleaned up
-	new_params = clean_params(params)
-	@post = Post.new(new_params)
+	@post = Post.new(params[:post])
 	if @post.valid?
 		@post.save
-		erb :post
+		erb :post_auth
 	else
 		@errors = @post.errors.messages
-		erb :error_page
+		erb :error
 	end
 end
 
-def clean_params(params)
-	params.symbolize_keys!
-	params.delete(:_method)
-	params.delete(:splat)
-	params.delete(:captures)
-	price = (params[:price].to_f * 100).to_i
-	params[:price] = price
-
-	id = params[:category_id].to_i
-	params[:category_id] = id
-
-	params
-end
-
-
 get '/posts/:id/edit' do  # Really ugly code. Needs to be cleaned up
-
-	@post = Post.find(params[:id])
-
-	category_name = Category.find(@post.category_id).name
-	@categories = Category.all
-	category_index = @categories.index{ |cat| cat.name == category_name }
-	@categories.insert(0, @categories.delete_at(category_index))
-
+	edit_key = params[:key]
+	@post = Post.find_by_edit_key(edit_key)
+	if @post.nil?
+		redirect '/'
+	end
+	@categories = get_ordered_category_list(@post.category)
 	@title = "Edit post #{params[:id]}"
 	erb :edit
 end
 
 put '/posts/:id' do
-	new_params = clean_params(params)
-	@post = Post.find(new_params[:id])
-	puts @post.methods
-	@post.update_attributes(new_params)
-	erb :post
+	p params
+	@post = Post.find(params[:id])
+	@post.update_attributes(params[:post])
+	if @post.valid?
+		@post.save
+		erb :post
+	else
+		@errors = @post.errors.messages
+		erb :error
+	end
 end
-
-
-

@@ -5,16 +5,16 @@ categories = [{name: "books"},
 			  {name: "computer"},
 			  {name: "free"},
 			  {name: "wanted"},
-			  {name: "casual encounters"},
-			  {name: "apts / housing"},
-			  {name: "rooms / shared"},
-			  {name: "sublets / temporary"},
-			  {name: "housing wanted"},
-			  {name: "housing swap"},
-			  {name: "vacation rentals"},
-			  {name: "parking / storage"},
-			  {name: "office / commercial"},
-			  {name: "real estate for sale"}]
+			  {name: "casual-encounters"},
+			  {name: "apts-housing"},
+			  {name: "rooms-shared"},
+			  {name: "sublets-temporary"},
+			  {name: "housing-wanted"},
+			  {name: "housing-swap"},
+			  {name: "vacation-rentals"},
+			  {name: "parking-storage"},
+			  {name: "office-commercial"},
+			  {name: "real-estate"}]
 
 image_urls = ["http://i.imgur.com/6Lc9tt0.gif", "http://i.imgur.com/j2nx07p.gif", "http://i.imgur.com/nQPUa8x.gif", "http://i.imgur.com/VoSfyvA.jpg", "http://i.imgur.com/Sp4AVcm.png", "http://i.imgur.com/WzQOq9m.png"]
 

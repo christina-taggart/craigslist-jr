@@ -1,0 +1,8 @@
+<h1><%= @post.title %></h1>
+<img src="<%= @post.image_url %>">
+<ul>
+	<li><%= @post.body %></li>
+	<li>$<%= "%.2f" % (@post.price / 100.0) %></li>
+	<li><%= @post.email %></li>
+	<li><%= @post.created_at %></li>
+</ul>

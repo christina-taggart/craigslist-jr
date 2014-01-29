@@ -1,8 +1,3 @@
 <div class="container">
-  <h1><%= @post.title %></h1>
-  <ul>
-  	<li><%= @post.created_at %></li>
-  	<li><%= @post.body %></li>
-  	<li><%= @post.email %></li>
-  </ul>
+	<%= erb :partial_post, :layout => false %>
 </div>
