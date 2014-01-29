@@ -16,3 +16,15 @@ h3 {
   font-family: helvetica, sans-serif;
   margin: 20px;
 }
+
+body {
+  background-image: url('../img/background_image.png');
+}
+body, a {
+  font-family: 'Actor', sans-serif;
+  color: #faebd7;
+}
+
+.post_info {
+  color: #faebd7;
+}
