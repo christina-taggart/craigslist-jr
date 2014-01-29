@@ -41,6 +41,20 @@ post '/add' do
   end
 end
 
-post '/edit/:edit_key' do
+get '/edit/:edit_key' do
+  @edited_post = Post.where(edit_key: params[:edit_key]).first
+  erb :edit
+end
 
+post '/edit/:edit_key' do
+  @edited_post = Post.where(edit_key: params[:edit_key]).first
+  @edited_post.title = params[:title]
+  @edited_post.description = params[:description]
+  @edited_post.email = params[:email]
+  @edited_post.price = params[:price]
+  if @edited_post.save
+    redirect "/posts/#{@edited_post.id}?edit_key=#{@edited_post.edit_key}"
+  else
+    redirect "/add/error"
+  end
 end
