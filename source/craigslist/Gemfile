@@ -18,6 +18,7 @@ gem 'rake'
 gem 'shotgun'
 
 gem 'digest'
+gem 'coinbase'
 
 group :test do
   gem 'faker'

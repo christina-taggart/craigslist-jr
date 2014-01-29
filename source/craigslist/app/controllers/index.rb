@@ -1,11 +1,9 @@
 require 'digest'
 
-
 get '/' do
 	@categories = Category.pluck(:name)
   erb :index
 end
-
 
 get '/categories/:category_name' do
 	@category = Category.find_by_name(params[:category_name])
@@ -56,4 +54,8 @@ put '/posts/:id' do
 		@errors = @post.errors.messages
 		erb :error
 	end
+end
+
+get "/cancel" do
+	"Y U NO GIVE ME BITCOIN?"
 end

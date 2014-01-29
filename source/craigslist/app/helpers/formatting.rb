@@ -15,3 +15,13 @@ def link_to_new_post_form(category)
 	"<a href='\/posts/new?id=" + category.id.to_s + "'>" + "Create New Post" + "</a>"
 end
 
+def generate_coinbase_button(item)
+	coinbase = Coinbase::Client.new(ENV['COINBASE_API_KEY'])
+	# p coinbase.buy_price(1)
+	btc_price = coinbase.buy_price(1).amount
+	p btc_price
+	post_price_btc = (item.price * 0.0001 / btc_price)
+	options = { callback_url: "/callback", success_url: "/success", cancel_url: "/cancel", auto_redirect: true, }
+	r = coinbase.create_button item.title, post_price_btc, item.title ,"custom code", options
+	r.embed_html
+end
