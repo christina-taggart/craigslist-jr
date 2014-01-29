@@ -1,0 +1,15 @@
+<div id="homebutton" class="container">
+<form action="/" method="get">
+  <input type="submit" value="Back to Home">
+</form>
+
+<h1>Autos</h1>
+<h3>Pick a car, any car.</h3>
+<form action="/newpost" method="get">
+  <input type="submit" value="Create a new post">
+</form><br>
+
+<% @posts.each do |post| %>
+<li><a href='http://localhost:9393/<%= @category.name.downcase %>/<%= post.title %>'><%= post.title %></a></li><br>
+<% end %>
+</div>

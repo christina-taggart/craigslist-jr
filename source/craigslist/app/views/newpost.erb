@@ -1,0 +1,28 @@
+<div class="container">
+  <form action="/" method="get">
+    <input type="submit" value="Back to Home">
+  </form>
+  <h1>Create a new listing</h1>
+  <form action='/confirmation' method="post">
+    <fieldset>
+      <li>
+        <label>Title of post</label>
+        <input ... name="title"/></li>
+      <li>
+        <label>A short descrption</label>
+        <input ... name="content"/></li>
+      <li>
+        <label>Price for listing</label>
+        <input ... name="price"/></li>
+      <li>
+        <label>Your email</label>
+        <input ... name="email"/></li>
+      <li>
+        <label>What category will you post this in?</label>
+        <input type="radio" name="category_id" value=1> Auto
+        <input type="radio" name="category_id" value=2> Pets
+        <input type="radio" name="category_id" value=3> Furniture
+        <input type="radio" name="category_id" value=4> Housing</li>
+    </fieldset>
+    <input type="submit"/>
+  </form>
