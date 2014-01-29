@@ -17,10 +17,8 @@ end
 
 def generate_coinbase_button(item)
 	coinbase = Coinbase::Client.new(ENV['COINBASE_API_KEY'])
-	# p coinbase.buy_price(1)
 	btc_price = coinbase.buy_price(1).amount
-	p btc_price
-	post_price_btc = (item.price * 0.0001 / btc_price)
+	post_price_btc = item.price * 0.0001 / btc_price  # Artificially reducing the exchange rate to make it cheap for me to demonstrate
 	options = { callback_url: "/callback", success_url: "/success", cancel_url: "/cancel", auto_redirect: true, }
 	r = coinbase.create_button item.title, post_price_btc, item.title ,"custom code", options
 	r.embed_html
