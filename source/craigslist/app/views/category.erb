@@ -1,10 +1,8 @@
 <div class="container">
-  <h1>All Categories</h1>
-  <p>Here are the categories</p>
+  <h1>Categories</h1>
   <ul>
   <% @category_names.each do |category| %>
   <li><a href = "/<%= category %>"><%= category %></a></li>
   <% end %>
 </ul>
-<a href="/">Go home!</a>
 </div>

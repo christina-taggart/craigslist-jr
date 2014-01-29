@@ -35,7 +35,7 @@ end
 
 get '/post/:secret_id/edit' do 
 	@category_names = Category.all.map {|category| category[:title]}
-	erb :update_post, locals: {secret_id: @secret_id} 
+	erb :post, locals: {secret_id: @secret_id} 
 end
 
 post '/post/:secret_id/edit' do
