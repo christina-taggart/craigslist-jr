@@ -1,29 +1,14 @@
 <div class="container">
-  <h1 class="center">EliDavidRossetShkurkinTheFirst List!</h1>
-  <h3 class="center">Categories</h3>
-  <ul id="cat_list">
-    <% @categories.each do |category| %>
-      <li class="cat">
-        <a href="/categories/<%= category.name %>"><%= category.name %></a>
-      </li>
-    <% end %>
-  </ul>
+  <h1><%= @post.title %></h1>
+  <h4>Category - <%= @post.category.name %></h4>
+  <% @post.attributes.each do |field, value| %>
+    <p>
+      <b><%= field %></b>: <%= value %>
+    </p>
+  <% end %>
   <fieldset>
-    <legend>Add a Category</legend>
-    <form name="new_category" action="category/new" method="post">
-      <table>
-        <tr>
-          <td><label for="name">Name: </label></td>
-          <td><input type="text" name="name"/></td>
-          <td><input type="submit" value="Submit" /></td>
-        <tr/>
-      </table>
-    </form>
-  </fieldset>
-  <br>
-  <fieldset>
-    <legend>Add a Post</legend>
-    <form name="new_post" action="post/new" method="post">
+    <legend>Edit Post</legend>
+    <form name="post_update" action="/post/update" method="post">
       <table>
         <tr>
           <td><label for="category">Category: </label></td>
@@ -49,10 +34,12 @@
           <td><input type="text" name="price"></td>
         </tr>
         <tr>
-          <td><input type="submit" value="Submit" /></td>
+              <span class="hide"><input type="text" value="<%= @post.id %>" name="post_id"></span>
+          <td><input type="submit" value="Update" /></td>
         </tr>
       </table>
     </form>
   </fieldset>
-  <h6 class="center"><a href="/map">Map View</a></h6>
+  <h5 class="center">Edit URL: /posts/edit?secret_key=<%= @post.secret_key %></h5>
+  <h6 class="center"><a href="/">Go Home</a></h6>
 </div>
