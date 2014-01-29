@@ -3,7 +3,7 @@
   <p>Here are the categories</p>
   <ul>
   <% @category_names.each do |category| %>
-  <li><%= category %></li>
+  <li><a href = "/<%= category %>"><%= category %></a></li>
   <% end %>
 </ul>
 <a href="/">Go home!</a>

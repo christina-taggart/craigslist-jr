@@ -6,6 +6,8 @@ class CreatePosts < ActiveRecord::Migration
       column.string :post_content
       column.string :price
       column.string :location
+      column.string :email
+      column.string :secret_id
       column.timestamps
   	end
   end
