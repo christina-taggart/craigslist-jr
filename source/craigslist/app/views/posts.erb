@@ -1,0 +1,11 @@
+<h3><%= Post.find(@current_post_id).title %></h3>
+
+<div class="post_info">
+  <p>
+    <%= "(#{@post.city} / #{@post.state})"%><br>
+    <%= "$#{@post.price}"%><br>
+    <%= @post.description %><br>
+    <%= "#{@post.email}"%><br>
+    <%= "#{@post.created_at}"%><br>
+  </p>
+</div>

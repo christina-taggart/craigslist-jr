@@ -1,0 +1,15 @@
+<h3><%= Category.find(@current_category_id).title %></h3>
+<div class="new_posts">
+  <a href="/posts">Create New Post</a>
+</div>
+
+<div class="posts">
+  <ul>
+  <% @posts.each do |post| %>
+    <% post_url = "/posts/#{post.id}" %>
+    <li><a href=<%= post_url %>><%= post.title %></a></li>
+  <% end %>
+</ul>
+</div>
+
+

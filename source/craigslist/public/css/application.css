@@ -7,3 +7,12 @@
 th {
   text-align: left;
 }
+
+h3 {
+  text-align: center;
+}
+
+.categories {
+  font-family: helvetica, sans-serif;
+  margin: 20px;
+}

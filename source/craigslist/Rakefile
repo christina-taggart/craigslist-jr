@@ -110,6 +110,16 @@ namespace :db do
   desc "Populate the database with dummy data by running db/seeds.rb"
   task :seed do
     require APP_ROOT.join('db', 'seeds.rb')
+    DataImporter::CategorySeeder.import
+    DataImporter::PostSeeder.import
+  end
+
+  desc "Sets everything up"
+  task :setup_all do
+    `rake db:drop`
+    `rake db:create`
+    `rake db:migrate`
+    `rake db:seed`
   end
 
   desc "Returns the current schema version number"
