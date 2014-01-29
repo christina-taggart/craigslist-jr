@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       col.string :name
       col.string :description
       col.integer :category_id
+      col.integer :secret
     end
   end
 end

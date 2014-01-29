@@ -18,7 +18,6 @@ get '/clothing' do
 end
 
 
-
 get '/posts/:id' do
    @post = Post.find(params[:id])
   erb :posts
@@ -27,6 +26,10 @@ end
 post '/posts' do
   #create a new post
   @post = Post.create(params)
-  redirect "/posts/#{@post.id}"
+  redirect "/posts/#{@post.id}/#{@post.secret}"
 end
 
+get '/posts/:id/:secret' do
+  @post = Post.find(params[:id])
+  erb :secret
+end
