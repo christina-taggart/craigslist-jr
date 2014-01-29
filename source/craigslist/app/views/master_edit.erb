@@ -1,0 +1,15 @@
+<div id="homebutton" class="container">
+<form action="/" method="get">
+  <input type="submit" value="Back to Home">
+</form>
+<h1>Your Current Form</h1>
+<h2><%= @post.title %></h2><br>
+Category: <%= @post.category.name %><br>
+<p> <%= @post.content %></h1><br><br>
+Contact Poster at: <%= @post.email%><br>
+<h1>Edit Form Here</h1>
+<form action='/<%= @post.category.name%>/<%= @post.id %>' method='post' id='user_post'>
+  Post Title:<br> <input type='text' name='title'><br>
+  Post Content:<br> <textarea form='user_post' name='content' rows='20' cols='30'></textarea><br>
+  <input type='submit' value='Submit Post!'>
+</form>

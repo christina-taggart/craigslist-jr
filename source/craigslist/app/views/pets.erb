@@ -10,6 +10,6 @@
 </form><br>
 
 <% @posts.each do |post| %>
-<li><a href='http://localhost:9393/<%= @category.name.downcase %>/<%= post.title %>'><%= post.title %></a></li><br>
+<li><a href='http://localhost:9393/<%= @category.name.downcase %>/<%= post.id %>'><%= post.title %></a></li><br>
 <% end %>
 </div>
