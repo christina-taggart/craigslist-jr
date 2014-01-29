@@ -3,6 +3,6 @@
   <p class="list"><%= @post.description %></p>
   <p class="list"><a href="mailtto:<%=@post.email%>"><%= @post.email %></a></p>
   <%if @edit_key%>
-    <p class="edit_link">To edit this page go to: /edit/<%= @edit_key %></p>
+    <p class="edit_link">To edit this page go to: http://localhost:9393/edit/<%= @edit_key %></p>
   <%end%>
 </div>
