@@ -7,5 +7,5 @@ def link_to_post(post)
 end
 
 def link_to_new_post_form(category)
-	"<a href='\/posts/new?q" + category.name + "'>" + "Create New Post" + "</a>"
+	"<a href='\/posts/new?category=" + category.name + "'>" + "Create New Post" + "</a>"
 end
