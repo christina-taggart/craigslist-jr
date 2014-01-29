@@ -1,4 +1,4 @@
-<%= category_id = Category.where("title = ?", category)[0][:id] %> 
+<% category_id = Category.where("title = ?", category)[0][:id] %> 
 
 <div class="container">
   <h1>All posts for <%= category %></h1>
