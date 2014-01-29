@@ -1,9 +1,11 @@
 <div class= "container">
+  <h1>Furniture</h1>
 <% @allposts.each do |post|%>
- <p><a href = "http://localhost:9393/posts/<%= post.id %>"> <%= post.description %> </a></p>
+ <p><a href = "http://localhost:9393/posts/<%= post.id %>"> <%= post.name %> </a></p>
  <% end %>
  <form action = "/posts" method="post">
- <p>Create a post</p>
+ <h2>Create a post</h2>
+   <div class="topics">
    email: <input type="email" name="email"><br>
    name: <input type="text" name="name"><br>
    description: <input type="text" name="description">
@@ -12,7 +14,9 @@
    secret: <input type="text" name = "secret" value = "<%= rand(5000..100000) %>">
  </div>
  <br>
+ </div>
  <input type="submit" value = "Create Post">
+
  </form>
 
  <a href= "http://localhost:9393/">home</a>

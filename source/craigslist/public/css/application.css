@@ -1,12 +1,32 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 300px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  text-align: center;
 }
 .special{
   display: none;
 }
-th {
+.centered {
+  display: block;
+}
+
+.topics{
   text-align: left;
+  padding: 10px;
+  color: blue;
+  font-weight: bolder;
+}
+
+h2{
+  font-size: 20px;
+  text-align: center;
+}
+
+input{
+display: block;
+margin:auto;
+padding: 5px;
+margin-bottom: 5px;
 }
