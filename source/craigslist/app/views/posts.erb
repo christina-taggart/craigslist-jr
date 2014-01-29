@@ -2,4 +2,7 @@
   <h3 class="list"><%= @post.title %> ($<%= @post.price %>)</h3>
   <p class="list"><%= @post.description %></p>
   <p class="list"><a href="mailtto:<%=@post.email%>"><%= @post.email %></a></p>
+  <%if @edit_key%>
+    <p class="edit_link">To edit this page go to: /edit/<%= @edit_key %></p>
+  <%end%>
 </div>

@@ -38,6 +38,11 @@ a:hover {
   color: red;
 }
 
+.edit_link {
+  text-align: center;
+  color: green;
+}
+
 #center-pic {
   position: relative;
   width: 100%
@@ -50,3 +55,4 @@ a:hover {
   position: relative;
   bottom: 0px;
 }
+
