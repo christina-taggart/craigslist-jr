@@ -23,7 +23,7 @@ get '/posts/:post_id' do
 	erb :post
 end
 
-post '/posts' do
+post '/posts' do # Really ugly code. Needs to be cleaned up
 	new_params = clean_params(params)
 	@post = Post.new(new_params)
 	if @post.valid?
@@ -37,6 +37,9 @@ end
 
 def clean_params(params)
 	params.symbolize_keys!
+	params.delete(:_method)
+	params.delete(:splat)
+	params.delete(:captures)
 	price = (params[:price].to_f * 100).to_i
 	params[:price] = price
 
@@ -45,3 +48,28 @@ def clean_params(params)
 
 	params
 end
+
+
+get '/posts/:id/edit' do  # Really ugly code. Needs to be cleaned up
+
+	@post = Post.find(params[:id])
+
+	category_name = Category.find(@post.category_id).name
+	@categories = Category.all
+	category_index = @categories.index{ |cat| cat.name == category_name }
+	@categories.insert(0, @categories.delete_at(category_index))
+
+	@title = "Edit post #{params[:id]}"
+	erb :edit
+end
+
+put '/posts/:id' do
+	new_params = clean_params(params)
+	@post = Post.find(new_params[:id])
+	puts @post.methods
+	@post.update_attributes(new_params)
+	erb :post
+end
+
+
+
