@@ -45,25 +45,25 @@ post '/post/:secret_id/edit' do
 	erb :index
 end
 
-get '/Automobiles' do
-	erb :view_posts, locals: {category: "Automobiles"}
+get '/:category' do
+	erb :view_posts, locals: {category: params[:category]}
 end
 
-get '/Furniture' do
-	erb :view_posts, locals: {category: "Furniture"}
-end
+# get '/Furniture' do
+# 	erb :view_posts, locals: {category: "Furniture"}
+# end
 
-get '/Housing' do
-	erb :view_posts, locals: {category: "Housing"}
-end
+# get '/Housing' do
+# 	erb :view_posts, locals: {category: "Housing"}
+# end
 
-get '/Misc' do
-	erb :view_posts, locals: {category: "Misc"}
-end
+# get '/Misc' do
+# 	erb :view_posts, locals: {category: "Misc"}
+# end
 
-get '/All%20the%20weird%20dirty%20stuff%20that%20happens%20via%20Craigslist' do
-	erb :view_posts, locals: {category: "All the weird dirty stuff that happens via Craigslist"}
-end
+# get '/All%20the%20weird%20dirty%20stuff%20that%20happens%20via%20Craigslist' do
+# 	erb :view_posts, locals: {category: "All the weird dirty stuff that happens via Craigslist"}
+# end
 
 
 # get category
