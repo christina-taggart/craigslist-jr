@@ -18,5 +18,6 @@ gem 'rake'
 
 gem 'shotgun'
 
-# Extras
-gem 'faker'
+group :test, :development do
+  gem 'faker'
+end
