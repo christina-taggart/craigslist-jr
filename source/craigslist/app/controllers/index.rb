@@ -27,6 +27,11 @@ post '/post_success' do
   erb :post_success
 end
 
+post '/successful_update' do
+  update_post(params)
+  erb :successful_update # display success page for update
+end
+
 # this will become the route to the
 # "secret" edit url for the post
 get '/edit/:edit_url' do
@@ -36,7 +41,25 @@ get '/edit/:edit_url' do
 erb :edit_post
 end
 
+post '/delete_post' do
+  delete_post(params)
+  erb :post_deleted
+end
 
+def delete_post(attributes)
+  Post.destroy(attributes["post_id"].to_i)
+end
+
+def update_post(attributes)
+  post = Post.find(attributes["post_id"])
+  post.title = attributes["title"]
+  post.price = attributes["price"].to_f
+  post.description = attributes["description"]
+  post.city = attributes["city"]
+  post.state = attributes["state"]
+  post.email = attributes["email"]
+  post.save!
+end
 
 def create_new_post(params)
   Post.create!(

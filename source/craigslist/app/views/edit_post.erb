@@ -13,5 +13,12 @@
   City: <input type="text" name="city" value=<%= @post.city %>><br><br>
   State: <input type="text" name="state" value=<%= @post.state %>><br><br>
   Email: <input type="text" name="email" value=<%= @post.email%>><br><br>
+  <input type="hidden" name="post_id" value=<%= @post.id %>>
   <input type="submit" value="Submit">
+</form>
+
+<h2>Warning: This is irreversible! :-(</h2>
+<form name="delete_post" action="/delete_post" method="POST">
+  <input type="submit" value="Delete This Post">
+  <input type="hidden" name="post_id" value=<%= @post.id %>>
 </form>
