@@ -20,6 +20,9 @@
 
     <label for "email">E-Mail:</label><br>
     <input type="text" name="email"><br><br><br>
-    <input type="submit" value="Add your post"><br>
+    <input type="submit" value="Add your post"><br><br>
+    <%if @error%>
+      <p class= "error">Complete all fields. Price must be a number.</p>
+    <%end%>
   </form>
 </div>

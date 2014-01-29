@@ -1,10 +1,9 @@
 <div class="container">
-  <h1 class="list">John & Aditya's Internet Bazaar</h1>
+  <h1>BUY THINGS</h1>
   <%@categories.each do |category| %>
     <p class="list"><a href="/categories/<%=category.id%>"><%= category.name %></a></p>
   <%end%>
   <br>
   <br>
   <img id="center-pic" src="http://25.media.tumblr.com/06bce63d415623aa4c73fefce929db36/tumblr_mimwflzEqI1qbsynzo1_500.jpg"/>
-  <p class="list" ><a href="/add">Post a listing</a></p>
 </div>

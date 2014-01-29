@@ -6,4 +6,5 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
   validates :email, presence: true
+  validates :price, numericality: true
 end

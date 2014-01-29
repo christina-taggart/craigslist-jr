@@ -18,6 +18,11 @@ get '/add' do
   erb :add
 end
 
+get '/add/error' do
+  @error = true
+  erb :add
+end
+
 post '/add' do
   new_post = Post.new(category_id: params[:category_id],
            title: params[:title],
@@ -25,10 +30,9 @@ post '/add' do
            email: params[:email],
            price: params[:price]
           )
-  if new_post.valid?
-    new_post.save
+  if new_post.save
     redirect "/posts/#{new_post.id}"
   else
-    redirect "/invalid_post"
+    redirect "/add/error"
   end
 end
