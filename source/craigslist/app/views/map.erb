@@ -10,10 +10,10 @@ function initialize() {
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'),
                                 mapOptions);
-  setMarkers(map, beaches);
+  setMarkers(map, posts);
 }
 
-var beaches = [
+var posts = [
   <% @posts.each do |post| %>
   ['<%= post.title %>', <%= post.lat %>, <%= post.lng %>, <%= post.id %>],
   <% end %>
@@ -35,15 +35,15 @@ function setMarkers(map, locations) {
   };
 
   for (var i = 0; i < locations.length; i++) {
-    var beach = locations[i];
-    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+    var post_location = locations[i];
+    var myLatLng = new google.maps.LatLng(post_location[1], post_location[2]);
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
         icon: image,
         shape: shape,
-        title: beach[0],
-        zIndex: beach[3]
+        title: post_location[0],
+        zIndex: post_location[3]
     });
   }
 }
