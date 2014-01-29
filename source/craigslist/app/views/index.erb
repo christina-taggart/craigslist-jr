@@ -1,17 +1,11 @@
 <div class="container">
   <h1>Welcome to Elliot's listings</h1>
-  <p>categories</p>
-  <ul><%@posts.each do |post|%>
-  <li><%=post.description%></li>
-  <%end%>
-</ul>
+  <h2>categories</h2>
+  <ul>
+    <%@categories.each do |category|%>
+      <li><%= link_to_category category %></li>
+    <%end%>
+  </ul>
+  <a href="/create-categories">create a new category here</a>
 </div>
 
-<div class="container">
-<form action="/posts" method="post">
-description: <input type="text" name="description">
-price: <input type="text" name="price">
-email: <input type="text" name="email">
-<input type="submit" value="Submit">
-</form>
-</div>

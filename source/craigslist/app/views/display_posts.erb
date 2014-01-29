@@ -1,0 +1,12 @@
+  <div class="container">
+    <ul>
+      <%@category_posts.each do |post|%>
+        <li>
+          <a href="/display-item/<%=post.description%>"><%=post.description%>
+          </a>
+        </li>
+      <%end%>
+    </ul>
+    <%= link_to('category_id', "/create-posts", category_id: 'hello')%>
+  <a href="/create-posts">create a new post here</a>
+  </div>
