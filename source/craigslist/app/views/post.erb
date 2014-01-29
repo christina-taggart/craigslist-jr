@@ -1,0 +1,12 @@
+<h2><%= @post.title %></h2>
+
+
+
+<%= @post.body %>
+
+<% if @post.price > 0 %>
+  <p>Price: <%= @post.price %> monies</p>
+<%end%>
+
+<a href="mailto: "<%= @post.email %>><%= @post.email %></a>
+<h4><a href="/<%= @category.id %>">Back to <%=@category.name %></a></h4>

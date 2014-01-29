@@ -1,0 +1,11 @@
+<form action="/<%= @category.id %>/new" method="post">
+  <input type="hidden" name='category_id' value=<%= @category.id %>>
+  <input type="text" name='title' class='title'>
+  <input type="text" name='price' class='price'>
+  <br>
+  <br>
+  <input type="text" name='email' class='email'><br><br>
+  <textarea name="body" class='body'></textarea>
+  <br><br>
+  <input type="submit" value="Submit" id="edit_button">
+</form>

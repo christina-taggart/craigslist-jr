@@ -1,0 +1,10 @@
+<h1><%= @category.name %></h1>
+<ul>
+  <% @posts.each do |post| %>
+    <h4><a href="/<%= @category.id %>/<%= post.id %>"><%= post.title %> - <%= post.price %></a></h4>
+  <% end %>
+</ul>
+
+<form action="/<%= @category.id %>/new" method="get">
+  <input type="submit" id="newpost" value="New Post" >
+</form>

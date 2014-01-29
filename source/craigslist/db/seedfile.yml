@@ -1,0 +1,55 @@
+For Sale:
+  -
+    title: ipod for sale
+    body: Stolen from a truck. Like new.
+    email: stolenshit@gmail.com
+    price: 150
+  -
+    title: ipad for sale
+    body: Stolen from a home. Not new.
+    email: burglar@gmail.com
+    price: 300
+Personals:
+  -
+    title: Curious Smurfette
+    body: No ladies in the village. Looking for someone to experiment with.
+    email: smurfette@smurfing.smurf
+    price:
+  -
+    title: Intergalactic bounty Hunter Seeks Same
+    body: been hunting Metroids for a while, looking for some fun with another intergalactic bounty hunter. NOt YOU, Spike!
+    email: samus@bounty.net
+    price:
+Community:
+  -
+    title: Let's all just get along
+    body: Drum circle and shit. peace and love. No showers.
+    email: pinkohippie@commie.org
+    price:
+  -
+    title: White supremacist bake sale
+    body: No ethnic pastries or other baked goods, please! Respect our community values.
+    email: whiteywhitewhite@aol.com
+    price:
+Jobs:
+-
+  title: sewer rat killer
+  body: Must provide own killing tools. We don't care if you eat them. bonus turtle soup possible.
+  email: shredder@tmnt.net
+  price:
+-
+  title: Member of teen fighting force
+  body: Just found out our token cyborg was 40. Seriously creepy. Apply at the giant t in the harbor.
+  email: robin@notbatmanssidekick.com
+  price:
+Housing:
+-
+  title: Van down by the river
+  body: Formerly owned by motivational speaker with a bit of a "weight problem." Writers and ex-wives need not apply.
+  email: matt@foley.com
+  price:
+-
+  title:
+  body: Just found out our token cyborg was 40. Seriously creepy. Apply at the giant t in the harbor.
+  email: robin@notbatmanssidekick.com
+  price:

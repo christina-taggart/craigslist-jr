@@ -3,7 +3,55 @@
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  overflow: hidden;
 }
+
 th {
   text-align: left;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+textarea {
+  resize: none;
+  height: 20px;
+}
+
+
+.body {
+  margin-top: 0px;
+  height: 200px;
+  width: 100%;
+}
+
+.title {
+  width: 85%;
+  margin-top: 15px;
+}
+
+.price{
+  width: 12%;
+  margin-left: 2px;
+  float: right;
+  margin-top: 15px;
+}
+
+#edit_button{
+  float: right;
+}
+
+#newpost{
+  float: right;
 }
