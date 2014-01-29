@@ -1,0 +1,7 @@
+<h1>Welcome to CraigsList!!!</h1>
+<h2>Categories</h2>
+<ul>
+<% @categories.each do |category| %>
+<li><a href="/<%= category.routify %>"><%= category.capitalize %></a></li>
+<% end %>
+</ul>

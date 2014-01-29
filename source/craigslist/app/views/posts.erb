@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+<h2><%= @category.capitalize %></h2>
+
+<% @posts.each do |post| %>
+<hr>
+<ul>
+<li><a href="/post/<%= post.id %>/edit"><%= post.title %></a></li>
+<li><%= post.content %></li>
+<li>Price: $<%= post.price_formatted %></li>
+<li><%= post.email %></li>
+<li>Updated at: <%= post.updated_at %></li>
+</ul>
+<% end %>
+<a href="/<%= params[:category] %>/post/new">Click Here to Create a Post</a>
