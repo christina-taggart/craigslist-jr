@@ -1,7 +1,7 @@
 <form action="/<%= params[:category] %>/post/new" method="post">
-<input type="text" name="title">Title</input><br>
-<input type="text" name="content">Content</input><br>
-<input type="text" name="price" value="0.00">Price</input><br>
-<input type="text" name="email">E-mail</input><br>
+<input type="text" name="post[title]">Title</input><br>
+<input type="text" name="post[content]">Content</input><br>
+<input type="text" name='post[price]' value="0.00">Price</input><br>
+<input type="text" name="post[email]">E-mail</input><br>
 <input type="submit" value="submit"></input>
 </form>

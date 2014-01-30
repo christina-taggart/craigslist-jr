@@ -5,16 +5,7 @@ class Category < ActiveRecord::Base
     name.split(' ').map { |w| w.capitalize}.to_a.join(" ")
   end
 
-  def routify
-    name.gsub(/\s/, "_")
-  end
-
-  def self.get_db_name(route)
-    route.split("_").join(" ")
-  end
-
-  def self.get_category_from_route(route)
-    db_name = get_db_name(route)
-    where(name: db_name).first
+  def self.find_by_category_name(name)
+    where(name: name).first
   end
 end
