@@ -24,6 +24,11 @@ class Post < ActiveRecord::Base
     create(post)
   end
 
+  def update_attributes_from_params(post)
+    post[:price] = Post.string_to_price(post[:price])
+    update_attributes(post)
+  end
+
   def self.string_to_price(str)
     (str.to_f*100).to_i
   end

@@ -40,8 +40,7 @@ get "/post/:id/edit/:key" do
 end
 
 post "/post/:id/edit" do
-	params[:post][:price] = string_to_price(params[:post][:price])
   @post = Post.find(params[:id])
-  @post.update_attributes(params[:post])
+  @post.update_attributes_from_params(params[:post])
   redirect to("/#{@post.category.routify}")
 end
