@@ -14,10 +14,11 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
-
+gem 'shoulda-matchers'
 gem 'shotgun'
 
 group :test do
   gem 'faker'
   gem 'rspec'
+  gem "factory_girl", "~> 4.0"
 end
